@@ -10,7 +10,7 @@ object PlantsModelImpl : PlantsModel,BaseModel(){
 
     override fun getAllPlants(accessToken: String,onSuccess: (List<PlantVO>) -> Unit, onFailure: (String) -> Unit) {
         val plantsFromDb = database.plantsDao().getAllMovies()
-        if(plantsFromDb.isEmpty()){
+        if(plantsFromDb.isNotEmpty()){
             onSuccess(plantsFromDb)
         }
         else {

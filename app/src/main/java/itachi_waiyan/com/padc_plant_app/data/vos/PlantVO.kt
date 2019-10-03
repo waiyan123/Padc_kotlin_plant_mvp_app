@@ -21,7 +21,7 @@ data class PlantVO(
 
     @ColumnInfo(name = "plant_type")
     @SerializedName("plant_type")
-    val plant_type :  List<String>,
+    val plant_type :  ArrayList<String>,
 
     @ColumnInfo(name = "description")
     @SerializedName("description")
