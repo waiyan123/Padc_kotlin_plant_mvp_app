@@ -33,11 +33,11 @@ data class PlantVO(
 
     @ColumnInfo(name = "tips")
     @SerializedName("tips")
-    val tips : List<TipsVO>,
+    val tips : TipsVO,
 
     @ColumnInfo(name = "uploaded_user")
     @SerializedName("uploaded_user")
-    val uploaded_user : List<UploadedUserVO>,
+    val uploaded_user : UploadedUserVO,
 
     @ColumnInfo(name = "plant_photo")
     @SerializedName("plant_photo")

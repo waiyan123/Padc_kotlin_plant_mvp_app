@@ -15,9 +15,7 @@ class GetAllPlantsResponse (
     @SerializedName("data")
     val data : List<PlantVO>
 
-
 )
-
 {
     fun isResponseOk() : Boolean {
         return code == CODE_RESPONSE_OK && data!=null

@@ -8,7 +8,7 @@ import itachi_waiyan.com.padc_plant_app.persistence.typeconverters.PlantTypeConv
 import itachi_waiyan.com.padc_plant_app.persistence.typeconverters.TipsConverter
 import itachi_waiyan.com.padc_plant_app.persistence.typeconverters.UploadedUserConverter
 
-@Database(entities = arrayOf(PlantVO::class),version = 3,exportSchema = false)
+@Database(entities = arrayOf(PlantVO::class),version = 6,exportSchema = false)
 @TypeConverters(TipsConverter::class,UploadedUserConverter::class,PlantTypeConverter::class)
 abstract class MyDatabase : RoomDatabase(){
 

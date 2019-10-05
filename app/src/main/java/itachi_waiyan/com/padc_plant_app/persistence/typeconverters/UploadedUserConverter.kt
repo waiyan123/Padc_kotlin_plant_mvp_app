@@ -9,14 +9,14 @@ import itachi_waiyan.com.padc_plant_app.data.vos.UploadedUserVO
 class UploadedUserConverter {
 
     @TypeConverter
-    fun toString (list:List<UploadedUserVO>):String {
-        return Gson().toJson(list)
+    fun toString (uploadedUserVO : UploadedUserVO):String {
+        return Gson().toJson(uploadedUserVO)
     }
 
     @TypeConverter
-    fun toList (json:String):List<UploadedUserVO>{
+    fun toVO (json:String) : UploadedUserVO{
 
-        val typeToken = object : TypeToken<List<UploadedUserVO>>(){
+        val typeToken = object : TypeToken<UploadedUserVO>(){
 
         }.type
 

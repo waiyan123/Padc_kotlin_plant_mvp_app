@@ -9,14 +9,14 @@ import itachi_waiyan.com.padc_plant_app.data.vos.TipsVO
 class TipsConverter {
 
     @TypeConverter
-    fun toString(list :List<TipsVO>) : String {
-        return Gson().toJson(list)
+    fun toString(tipsVO :TipsVO) : String {
+        return Gson().toJson(tipsVO)
     }
 
     @TypeConverter
-    fun toList(json : String) : List<TipsVO>{
+    fun toObject(json : String) : TipsVO{
 
-        val typeToken = object : TypeToken<List<TipsVO>>(){
+        val typeToken = object : TypeToken<TipsVO>(){
 
         }.type
         return Gson().fromJson(json,typeToken)
