@@ -89,6 +89,7 @@
         <TextView
             android:text="LOGIN"
             android:textColor="@color/white"
+            android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:layout_marginTop="@dimen/margin_20"
             android:layout_marginBottom="@dimen/margin_20"

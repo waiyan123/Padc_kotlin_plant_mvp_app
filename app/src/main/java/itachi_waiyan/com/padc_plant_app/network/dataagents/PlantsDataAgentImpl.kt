@@ -3,6 +3,8 @@ package itachi_waiyan.com.padc_plant_app.network.dataagents
 import itachi_waiyan.com.padc_plant_app.data.vos.PlantVO
 import itachi_waiyan.com.padc_plant_app.network.PlantsApi
 import itachi_waiyan.com.padc_plant_app.network.responses.GetAllPlantsResponse
+import itachi_waiyan.com.padc_plant_app.network.responses.LoginResponse
+import itachi_waiyan.com.padc_plant_app.persistence.UserEntity
 import itachi_waiyan.com.padc_plant_app.utils.BASE_URL
 import itachi_waiyan.com.padc_plant_app.utils.EM_NULL_EVENT_RESPONSE
 import okhttp3.OkHttpClient
@@ -31,7 +33,10 @@ object PlantsDataAgentImpl :PlantsDataAgent {
             .build()
 
         plantsApi = retrofit.create(PlantsApi::class.java)
+
     }
+
+
 
     override fun getAllPlants(accessToken: String,onSuccess: (List<PlantVO>) -> Unit, onFailure: (String) -> Unit) {
 
@@ -45,6 +50,33 @@ object PlantsDataAgentImpl :PlantsDataAgent {
                 call: Call<GetAllPlantsResponse>,
                 response: Response<GetAllPlantsResponse>
             ) {
+                val mResponse = response.body()
+                if (mResponse != null) {
+                    if(mResponse.data!=null){
+                        onSuccess(mResponse.data)
+                    }
+                    else onFailure(mResponse.message)
+                }
+                else onFailure(EM_NULL_EVENT_RESPONSE)
+            }
+
+        })
+    }
+
+    override fun login(
+        accessToken: String,
+        name:String,
+        password:String,
+        onSuccess: (UserEntity) -> Unit,
+        onFailure: (String) -> Unit
+    ) {
+        val call = plantsApi.login(accessToken, name, password)
+        call.enqueue(object : Callback<LoginResponse>{
+            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+                onFailure(t.localizedMessage)
+            }
+
+            override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                 val mResponse = response.body()
                 if (mResponse != null) {
                     if(mResponse.data!=null){
