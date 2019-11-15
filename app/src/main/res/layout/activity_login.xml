@@ -5,6 +5,12 @@
     android:background="@color/textColorPrimaryLight"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:id="@+id/layout_title"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
     <TextView
         android:text="LOGIN"
         android:layout_marginTop="@dimen/margin_100"
@@ -21,6 +27,14 @@
         android:layout_marginLeft="@dimen/margin_10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_user_info"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
     <TextView
         android:text="EMAIL ID"
@@ -79,11 +93,13 @@
         android:textColor="@color/iconColor3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+</LinearLayout>
 
     <LinearLayout
         android:id="@+id/login_layout"
         android:layout_marginTop="@dimen/margin_100"
         android:background="@drawable/login_button_background"
+        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <TextView

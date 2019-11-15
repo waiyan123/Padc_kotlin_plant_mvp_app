@@ -85,6 +85,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_plants_list"
+        android:visibility="gone"
         android:padding="@dimen/margin_10"
         app:layout_constraintTop_toBottomOf="@id/main_banner_layout"
         android:layout_width="match_parent"

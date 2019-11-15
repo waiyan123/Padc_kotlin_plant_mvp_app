@@ -11,6 +11,7 @@
 
         <ImageView
             android:id="@+id/img_plant_pic"
+            android:transitionName="img_plant"
             android:src="@drawable/plant_pic"
             android:scaleType="centerCrop"
             android:layout_width="match_parent"
@@ -92,6 +93,7 @@
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rv_plant_details"
+                        android:visibility="gone"
                         android:layout_marginTop="@dimen/margin_5"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/height_150"/>
@@ -99,6 +101,8 @@
             </androidx.cardview.widget.CardView>
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:src="@drawable/ic_favorite_border_black_24dp"
+                    android:id="@+id/img_float"
+                    android:visibility="gone"
                     app:layout_anchor="@id/card_plant"
                     android:scaleType="centerCrop"
                     android:scrollX="3dp"

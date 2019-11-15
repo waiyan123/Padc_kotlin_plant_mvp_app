@@ -1,5 +1,6 @@
 package itachi_waiyan.com.padc_plant_app.mvp.views
 
+import android.widget.ImageView
 import itachi_waiyan.com.padc_plant_app.data.vos.PlantVO
 
 interface PlantsListView : BaseView{
@@ -8,5 +9,5 @@ interface PlantsListView : BaseView{
 
     fun displayError (error:String)
 
-    fun navigateToDetail(plantId:String)
+    fun navigateToDetail(plantId:String,imgView : ImageView)
 }

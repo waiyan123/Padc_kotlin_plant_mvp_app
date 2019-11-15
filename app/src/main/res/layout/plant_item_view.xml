@@ -21,6 +21,7 @@
         <ImageView
             android:id="@+id/img_plant_pic"
             android:src="@drawable/plant_pic"
+            android:transitionName="img_plant"
             android:background="@android:drawable/screen_background_light_transparent"
             android:scaleType="centerCrop"
             android:layout_margin="@dimen/margin_20"
