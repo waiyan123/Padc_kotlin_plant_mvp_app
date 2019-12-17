@@ -11,6 +11,7 @@ class PlantItemViewHolder (itemView: View, private val delegate: PlantsItemDeleg
     BaseViewHolder<PlantVO>(itemView){
 
     init {
+//        Log.d("test---","init")
         Log.d("test---","init")
         itemView.setOnClickListener {
             data?.plant_id?.let {
