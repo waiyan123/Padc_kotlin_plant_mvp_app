@@ -60,6 +60,13 @@ class DetailsActivity : AppCompatActivity(),PlantDetailView{
         }
         plantDetailPresenter.onCreate()
 
+        btn_lottie.setOnClickListener(object : View.OnClickListener{
+            override fun onClick(p0: View?) {
+                btn_lottie.playAnimation()
+            }
+
+        })
+
         setUpAnimation().start()
     }
 

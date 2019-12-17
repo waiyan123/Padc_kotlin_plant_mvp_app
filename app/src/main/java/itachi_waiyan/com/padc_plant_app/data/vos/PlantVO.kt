@@ -2,10 +2,8 @@ package itachi_waiyan.com.padc_plant_app.data.vos
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
-import androidx.room.Ignore
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
-import itachi_waiyan.com.padc_plant_app.persistence.typeconverters.PlantTypeConverter
 
 @Entity(tableName = "plant_table")
 data class PlantVO(

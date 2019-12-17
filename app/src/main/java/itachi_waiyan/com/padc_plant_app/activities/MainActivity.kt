@@ -79,6 +79,7 @@ class MainActivity : AppCompatActivity(),PlantsListView {
                     setUpAnimation().start()
                 }
             })
+            fade.interpolator = AccelerateDecelerateInterpolator()
 
         }
     }

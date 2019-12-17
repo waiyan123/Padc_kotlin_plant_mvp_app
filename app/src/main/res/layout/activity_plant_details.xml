@@ -91,6 +91,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/btn_lottie"
+                        android:layout_marginTop="@dimen/margin_5"
+                        app:lottie_fileName="favourite_animation.json"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rv_plant_details"
                         android:visibility="gone"
